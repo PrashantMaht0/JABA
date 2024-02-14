@@ -29,5 +29,20 @@ public class arrays {
         for(String i : cars){
             System.out.println(i);
         }
+
+        //Multi dimentional array :(eg a 3x3 matrix)
+        int[][] matrix ={{1,2,3}
+                        ,{4,5,6}
+                        ,{7,8,9}};
+
+        for (int i[] : matrix) {
+            for (int j : i){
+                System.out.println(j);
+            }
+        }
+
+        System.out.println("------------------------------------------------------\n");
+         
+        System.out.println(matrix[1][1]);
     }
 }
