@@ -1,9 +1,10 @@
-/*Java Arrays:
+/*Java Arrays:Basics
  * 
  * 1: One Dimentional array : (only 1 axis) you can traverse in both direction
  * 2: Multi Dimentional (2-d)array : (2 axis) may traverse options:
  *  arrays can be of any type : Integers , Floats , Double , characters , Strings , Objects 
 */
+import java.util.Arrays;
 import java.util.Scanner ;
 class student{
     public int roll_no ;
