@@ -31,7 +31,7 @@ grade :
 Multiply the credit point of each subject by the grade you achieved in that subject:
 
 Subject A: (4 \times 8 = 32)
-Subject B: (3 \times 9 = 27)
+Subject B: (3 \times 9 = 27)     
 Subject C: (3 \times 7 = 21)
 Subject D: (1 \times 8 = 14)
 Add all the scores:

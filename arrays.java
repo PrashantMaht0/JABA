@@ -4,6 +4,16 @@
  * 2: Multi Dimentional (2-d)array : (2 axis) may traverse options:
  *  arrays can be of any type : Integers , Floats , Double , characters , Strings , Objects 
 */
+class student{
+    public int roll_no ;
+    public String name ;
+
+    student(int roll_no ,String name){
+        this.roll_no = roll_no;
+        this.name = name ;
+    }
+
+};
 
 public class arrays {
     public static void main(String[] args) {
@@ -44,5 +54,20 @@ public class arrays {
         System.out.println("------------------------------------------------------\n");
          
         System.out.println(matrix[1][1]);
+
+
+        // array of objects :
+
+        student arr[] = new student[5];
+
+        arr[0] = new student(1,"prashant");
+        arr[1] = new student(2,"vedant");
+        arr[2] = new student(3,"Sushil");
+        arr[3] = new student(4,"summit");
+        arr[4] = new student(5,"smith");
+        for(int i =0;i<arr.length;i++){
+            System.out.println("Roll no :"+ arr[i].roll_no+" \t Name :"+ arr[i].name);
+
+        }
     }
 }
