@@ -4,7 +4,6 @@
  * 2: Multi Dimentional (2-d)array : (2 axis) may traverse options:
  *  arrays can be of any type : Integers , Floats , Double , characters , Strings , Objects 
 */
-import java.util.Arrays;
 import java.util.Scanner ;
 class student{
     public int roll_no ;
@@ -94,7 +93,7 @@ public class arrays {
     int jaggedArray[][] = new int[n_of_Rows][];
 
     //initialize the length of each sub-array:
-    for(int i=0;i<n_of_Rows;i++){
+        for(int i=0;i<n_of_Rows;i++){
         System.out.println("Enter the length of Sub-array ["+ (i+1) +"] :");
         int rowlength = scan.nextInt();
         jaggedArray[i] = new int[rowlength];//creating a new array in array(jaggedArray)of given length by user
