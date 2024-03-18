@@ -8,9 +8,7 @@ Array insertion of element: (1)Starting of array
 Array deletion of element :(1)Starting of array 
                             (2)End of array
                             (3)Middle of array(anywhere)
-Array updation of element :(1)Starting of array 
-                            (2)End of array
-                            (3)Middle of array(anywhere)
+Array updation of element : (1)Middle of array(anywhere)
 */
 
 public class Array_idu {
@@ -43,8 +41,36 @@ public class Array_idu {
         new_array[i] = array[j++];
     }
     return new_array;
-}
+    }
 
+    public static int[] DelStart(int array[], int size){
+        int new_size = size-1;
+        int new_arr[] = new int[new_size];
+        for (int i = 0; i < new_size; i++) {
+            new_arr[i] = array[i+1];
+        }
+        return new_arr;
+    }
+    public static int[] DelEnd(int array[], int size){
+        int new_size = size-1;
+        int new_arr[] = new int[new_size];
+        for (int i = 0; i < new_size; i++) {
+            new_arr[i] = array[i];
+        }
+        return new_arr;
+    }
+    public static int[] DelMid(int array[], int size,int pos){
+        int new_size = size -1;
+        int new_arr[] = new int[new_size];
+        for(int i=0,j=0;i<size;i++){
+            if(i==pos){
+                continue;
+            }
+            new_arr[j++]=array[i];
+        }
+
+        return new_arr;
+    }
     static Scanner scan = new Scanner(System.in);
     static void Insert(int arr[],int size){
         
@@ -76,10 +102,52 @@ public class Array_idu {
             break;
         
             default:
+                System.out.println("error!!!!!!!!!!!!!!");
 
                 break;
         }
 
+    }
+
+    static void Del_(int arr[],int size){
+
+        System.out.println("Where you want to de the element :\r\n (1)Starting of array \r\n" + 
+                                                                    "(2)End of array\r\n" + 
+                                                                    "(3)Middle of array(anywhere)");
+        int ch = scan.nextInt();
+        switch (ch) {
+            case 1:
+                    arr = DelStart(arr, size);
+                    System.out.println(Arrays.toString(arr));
+                break;
+        case 2:
+                    
+                    arr = DelEnd(arr, size);
+                    System.out.println(Arrays.toString(arr));
+            break;
+        case 3:
+                    System.out.println("Enter the Postion of element :");
+                    int pos = scan.nextInt();
+                    arr = DelMid(arr, size,pos);
+                    System.out.println(Arrays.toString(arr));
+            break;
+        
+            default:
+                System.out.println("error!!!!!!!!!!!!!!");
+
+                break;
+        }
+    }
+
+    public static int[] update(int arr[], int size){
+        System.out.println("Enter the element :");
+        int element = scan.nextInt();
+        System.out.println("Enter the Postion of element :");
+        int pos = scan.nextInt();
+
+        arr[pos]=element;
+        System.out.println(Arrays.toString(arr));
+        return arr;
     }
     public static void main(String[] args) { 
         System.out.println("Enter the size of array ");
@@ -95,13 +163,13 @@ public class Array_idu {
     switch (ch) {
         case 1:
             Insert(array, size);
-        //     break;
-        // case 1:
-        //     Insert(array, size);
-        //     break;
-        // case 1:
-        //     Insert(array, size);
-        //     break;
+            break;
+        case 2:
+            Del_(array, size);
+            break;
+        case 3:
+            update(array, size);
+            break;
     
         default:
             break;
