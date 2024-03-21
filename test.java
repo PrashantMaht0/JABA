@@ -7,7 +7,6 @@ public class test {
         System.out.println("1. Circle");
         System.out.println("2. Rectangle");
         System.out.println("3. Square");
-        System.out.println("4. Triangle");
 
         int choice = scanner.nextInt();
 
@@ -20,9 +19,6 @@ public class test {
                 break;
             case 3:
                 squareCalculations();
-                break;
-            case 4:
-                triangleCalculations();
                 break;
             default:
                 System.out.println("Invalid choice. Please select a valid option.");
@@ -75,26 +71,4 @@ public class test {
         scanner.close();
     }
 
-    private static void triangleCalculations() {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("Enter the base length of the triangle:");
-        double base = scanner.nextDouble();
-
-        System.out.println("Enter the height of the triangle:");
-        double height = scanner.nextDouble();
-
-        System.out.println("Enter the first side length of the triangle:");
-        double side1 = scanner.nextDouble();
-
-        System.out.println("Enter the second side length of the triangle:");
-        double side2 = scanner.nextDouble();
-
-        double area = 0.5 * base * height;
-        double perimeter = base + side1 + side2;
-
-        System.out.println("Area of the triangle: " + area);
-        System.out.println("Perimeter of the triangle: " + perimeter);
-        scanner.close();
-    }
 }
