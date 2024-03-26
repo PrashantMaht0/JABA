@@ -10,7 +10,7 @@ public class test {
 
         int choice = scanner.nextInt();
 
-        switch (choice) {
+      switch (choice) {
             case 1:
                 circleCalculations();
                 break;
