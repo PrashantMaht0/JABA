@@ -60,6 +60,7 @@ public class SGPA {
         no_s = scanOb.nextInt();
         marks = new int[no_s];
         credits = new int[no_s];
+
         grade_points = new int[no_s];
     }
 
