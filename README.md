@@ -1,2 +1,3 @@
 # JABA
-hello java
+hello java 
+this is private repo for my java practice
